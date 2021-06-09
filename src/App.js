@@ -11,7 +11,6 @@ function App() {
     }
 
     const [citas, guardarCitas] = useState(citasIniciales) // Arreglo de citas
-    console.log('citas', citas)
 
     useEffect(() => {
         localStorage.setItem('citas', JSON.stringify(citas));

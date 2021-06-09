@@ -7,7 +7,7 @@ const ListaCitas = ({ citas, eliminarCita }) => {
         <>
             <h2>Administa tus citas</h2>
             {
-                citas
+                citas.length > 0
                     ?
                     citas.map((cita) =>
                         <Cita
