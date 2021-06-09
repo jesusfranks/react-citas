@@ -6,8 +6,12 @@ function App() {
 
     //citas en local storage
     let citasIniciales = JSON.parse(localStorage.getItem('citas'));
+    if (!citasIniciales) {
+        citasIniciales = []
+    }
 
     const [citas, guardarCitas] = useState(citasIniciales) // Arreglo de citas
+    console.log('citas', citas)
 
     useEffect(() => {
         localStorage.setItem('citas', JSON.stringify(citas));
